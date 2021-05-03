@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "tp1-mongo",
+  "version": "1.0.0",
+  "main": "JavaScript1.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demigier/Taller-Prog-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demigier/Taller-Prog-2/issues"
+  },
+  "homepage": "https://github.com/demigier/Taller-Prog-2#readme",
+  "description": ""
+}

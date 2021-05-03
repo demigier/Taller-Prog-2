@@ -1,0 +1,63 @@
+[
+	[
+		{
+			"id": 91,
+			"tipo": "perro",
+			"raza": "bulldog frances",
+			"nombre": "Hector",
+			"nroRegistro": 1111,
+			"fechaNacimiento": "09/09/2013",
+			"duenio": {
+				"nombre": "Lorena",
+				"telefono": 112474555
+			},
+			"familia": {
+				"madreId": 33,
+				"padreId": 37
+			},
+			"crias": [
+				99
+			]
+		}
+	],
+	[
+		{
+			"id": 99,
+			"tipo": "perro",
+			"raza": "bulldog frances",
+			"nombre": "Roberto",
+			"nroRegistro": 1111,
+			"fechaNacimiento": "27/01/2017",
+			"duenio": {
+				"nombre": "Lorena",
+				"telefono": 112474555
+			},
+			"familia": {
+				"madreId": 82,
+				"padreId": 91
+			},
+			"crias": [
+				154
+			]
+		}
+	],
+	[
+		{
+			"id": 154,
+			"tipo": "perro",
+			"raza": "bulldog frances",
+			"nombre": "India",
+			"nroRegistro": 15154,
+			"fechaNacimiento": "10/04/2020",
+			"duenio": {
+				"nombre": "Matias",
+				"telefono": 15246765741
+			},
+			"familia": {
+				"madreId": 102,
+				"padreId": 99
+			},
+			"crias": []
+		}
+	]
+]
