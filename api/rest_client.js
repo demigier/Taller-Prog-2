@@ -25,9 +25,18 @@ export const createAnimal = async(nuevoAnimal)=>{
     }
 };
 
-export const getAnimal = async(id, nuevoAnimal)=>{
+export const getAnimal = async(id)=>{
     try {
-        await axios.post(`http://localhost:3000/:${id}`, nuevoAnimal);
+        await axios.get(`http://localhost:3000/:${id}`);
+    }
+    catch (err) {
+        console.log(err.message)
+    }
+};
+
+export const updateAnimal = async(id, nuevoAnimal)=>{
+    try {
+        await axios.put(`http://localhost:3000/:${id}`, nuevoAnimal);
     }
     catch (err) {
         console.log(err.message)

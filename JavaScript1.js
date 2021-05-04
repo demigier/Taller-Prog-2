@@ -72,6 +72,23 @@ export class RegistroDeAnimales {
         return pude;
     }
 
+    actualizarAnimal(animal) {
+        let i = 0;
+        let pude = false;
+
+        while (i < this.registro.length && !pude) {
+            if (this.registro[i].id == animal.id) {
+                this.registro[i] = animal;
+                pude = true;
+            }else {
+                i++;
+            }
+        }
+        if(!pude){
+            console.error('No es posible actualizar ya que ese animal no existe');
+        }
+    }
+
     guardar() {
         if(this.registro.length > 0){
             let txt = JSON.stringify(this.registro);

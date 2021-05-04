@@ -47,20 +47,27 @@ app.post(('/'), (req, res) => {
 
 //Viene de updateAnimal
 app.put(('/:id'), (req, res) => {
-    //Actualizar
-    
-    if(res.json != null){
-        // req.body.id
-        // req.params.id
+    //req.body => nuevo animal
+    //req.params.id => id del nuevo animal
+
+    if(req.body && req.params.id){
+        if(req.body.id == req.params.id){
+            if(req.params.id && req.params.tipo && req.params.raza && req.params.nombre && req.params.nroRegistro && req.params.fechaNacimiento && req.params.madreId && req.params.padreId && req.params.nombreDuenio && req.params.telefonoDuenio){
+                registroDeAnimales.actualizarAnimal(new Animal(req.params.id, req.params.tipo, req.params.raza, req.params.nombre, req.params.nroRegistro, req.params.fechaNacimiento, req.params.madreId, req.params.padreId, req.params.nombreDuenio, req.params.telefonoDuenio));
+            }else{
+                console.error('No deje campos del animal vacios');
+            }
+        }
     }
 })
 
 //Viene de getAnimal
 app.get(('/:id'), (req, res) => {
     //Buscar uno
-    var registro = registroDeAnimales.registro;
-    
-    // if(/*verificar si existe*/){
-    //     registroDeAnimales.updateAnimal(res.data);
-    // }
+    const animalBuscado = registroDeAnimales.buscarAnimalPorId(req.params.id);
+    if(animalBuscado){
+        res.json(animalBuscado);
+    }else{
+        res.json('No existe dicho animal');
+    }
 })
